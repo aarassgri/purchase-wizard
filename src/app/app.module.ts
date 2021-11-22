@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { PlanSelectorComponent } from './pages/plan-selector/plan-selector.component';
 import { TabComponent } from './components/tab/tab.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanSelectorComponent,
     TabComponent,
-    FormPageComponent
+    FormPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

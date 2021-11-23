@@ -1,4 +1,137 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  padding-top: 100px;
+  padding-top: 120px;
+  background-color: rgb(226, 226, 226);
+}
+
+a {
+  color: #0069d9;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.header {
+  margin-bottom: 100px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-custom {
+  height: 440px;
+  border-radius: 15px;
+  border: 1px solid rgb(136, 136, 136);
+}
+
+.card-body {
+  height: 230px;
+}
+
+.card-background-Personal-1 {
+  /* background-color: #c2d7ffc7; */
+  background-color: #f6f9ff;
+  background-image: linear-gradient(43deg, #f6f9ff 0%, #adbffc 100%);
+}
+.card-background-Personal-2 {
+  /* background-color: #8ab6f8c9; */
+  background-color: #f6f9ff;
+  background-image: linear-gradient(43deg, #f6f9ff 0%, #789cff 100%);
+}
+.card-background-Personal-3 {
+  /* background-color: #66a3ffb4; */
+  background-color: #f6f9ff;
+  background-image: linear-gradient(43deg, #f6f9ff 0%, #3b80ff 100%);
+}
+
+.card-background-Enterprise-1 {
+  background-color: #ebd6ffc0;
+}
+.card-background-Enterprise-2 {
+  background-color: #dab2ffb7;
+}
+.card-background-Enterprise-3 {
+  background-color: #b15dff91;
+}
+
+.card-title {
+  padding: 5px 0;
+}
+
+.price-text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn-select {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.btn-select-enterprise {
+  background-color: rgb(167, 54, 219);
+  border: 1px solid rgb(167, 54, 219);
+}
+
+.btn-select-enterprise:active,
+.btn-select-enterprise:focus,
+.btn-select-enterprise:hover {
+  /* background-color: rgb(141, 24, 24); */
+  background-color: rgb(165, 0, 206);
+
+  border: 1px solid black;
+}
+
+.btn-content {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  margin: 15px 5px;
+  width: 120px;
+}
+
+.btn-content-a:active,
+.btn-content-a:focus,
+.btn-content-a:hover {
+  background-color: #2d75fc;
+  /* background-image: linear-gradient(to bottom right, #bad2ff, #6fa1ff); */
+  border: 1px solid black;
+}
+
+.btn-content-b:active,
+.btn-content-b:focus,
+.btn-content-b:hover {
+  background-color: rgb(167, 54, 219);
+  /* background-image: linear-gradient(to bottom right, #d2a1ff, #670380) */
+  border: 1px solid black;
+}
+
+.btn-select:hover {
+  color: rgb(0, 0, 0);
+}
+
+.card-c {
+  border: 1px solid rgba(255, 0, 0, 0) (243, 243, 243);
+}
+
+.collapse {
+  border: 1px solid rgba(255, 0, 0, 0) (243, 243, 243);
+}
+
+.most-popular-logo {
+  position: absolute;
+}
+
+.most-popular-logo img {
+  width: 150px;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 190px;
+  border-top: 3px solid rgb(0, 0, 0);
+  margin: 0 auto;
 }

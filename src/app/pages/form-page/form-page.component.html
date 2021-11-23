@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 <div class="container col-sm-6">
-    <h4>Credit Card Information</h4>
+    <h4 class="text-center mb-4">Credit Card Information</h4>
     <hr>
     <form (ngSubmit)=onSubmit(creditCardForm) #creditCardForm="ngForm">
         <div class="form-row justify-content-center">
@@ -93,213 +93,159 @@
             </div>
         </div>
 
-
-   
-
-  
-
-
-
-
-
-
-    
-
-   
-
-    
-
-    <div class="form-group">
-        <label for="exampleInputEmail1">Street1</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        id="stree1" 
-        ngModel
-        name="street1" 
-        required>
-    </div>
-
-    <div class="form-group">
-        <label for="exampleInputEmail1">Street2</label>
-        <input 
-        type="text" 
-        class="form-control" 
-        id="stree2" 
-        ngModel
-        name="street2">
-    </div>
-
-
-
-    <div class="form-row justify-content-center">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="exampleInputEmail1">City</label>
-                <input 
-                type="text" 
-                class="form-control" 
-                id="city" 
-                ngModel 
-                name="city"
-                required>
-            </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Street1</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="stree1" 
+            ngModel
+            name="street1" 
+            required>
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Zip Code</label>
-                <input 
-                type="text" 
-                class="form-control" 
-                id="zipCode" 
-                ngModel
-                name="zipCode" 
-                required>
-            </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Street2</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="stree2" 
+            ngModel
+            name="street2">
         </div>
-    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="form-row justify-content-center">
-        <div class="col-sm-10">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Card Number</label>
-                <div class="row col-sm-12 ">
-                        <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;"  >
-                            <input 
-                            type="num" 
-                            class="form-control" 
-                            id="cardNumber1" 
-                            ngModel
-                            name="cardNumber1" 
-                            required maxlength="4" 
-                                minlength="4"
-                                (keydown)="cardNumberEntered(creditCardForm, $event)">
-                        </div>
-                        <!-- <h3>-</h3> -->
-                        <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
-                            <input type="num" class="form-control" id="cardNumber2" ngModel
-                            name="cardNumber2" required maxlength="4" minlength="4">
-                        </div>
-                        <!-- <h3 >-</h3> -->
-                        <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
-                            <input type="num" class="form-control" id="cardNumber3" ngModel
-                            name="cardNumber3" required maxlength="4" minlength="4">
-                        </div>
-                        <!-- <h3 >-</h3> -->
-                        
-                        <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
-                            <input type="num" class="form-control" id="cardNumber4" ngModel
-                            name="cardNumber4" required maxlength="4" minlength="4">
-                        </div>
-                    </div>
+        <div class="form-row justify-content-center">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">City</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="city" 
+                    ngModel 
+                    name="city"
+                    required>
                 </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-group">
-                <label for="exampleInputEmail1">CCV</label>
-                <!-- <div class="row"> -->
-                        <input type="num" class="form-control" id="ccv" ngModel
-                        name="ccv" required maxlength="3" minlength="3">
-                <!-- </div> -->
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Zip Code</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="zipCode" 
+                    ngModel
+                    name="zipCode" 
+                    required>
+                </div>
             </div>
         </div>
-    </div>
 
-
-
-
-
-
-    
-    <div class="form-row justify-content-center">
-        <div class="col-sm-8">
-            <div class="form-group">
-                <label><span>Expiration</span></label>
-                    <div class="input-group justify-content-start">
-                        <div class="col-sm-5" style="padding-left:0px">
-                            <select id="card-expiration-month" name="exoiration-month" class="form-control" required ngModel>
-                                <option value="" disabled selected>MM</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
+        <div class="form-row justify-content-center">
+            <div class="col-sm-10">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Card Number</label>
+                    <div class="row col-sm-12 ">
+                            <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;"  >
+                                <input 
+                                type="num" 
+                                class="form-control" 
+                                id="cardNumber1" 
+                                ngModel
+                                name="cardNumber1" 
+                                required maxlength="4" 
+                                    minlength="4"
+                                    (keydown)="cardNumberEntered(creditCardForm, $event)">
+                            </div>
+                            <!-- <h3>-</h3> -->
+                            <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
+                                <input type="num" class="form-control" id="cardNumber2" ngModel
+                                name="cardNumber2" required maxlength="4" minlength="4">
+                            </div>
+                            <!-- <h3 >-</h3> -->
+                            <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
+                                <input type="num" class="form-control" id="cardNumber3" ngModel
+                                name="cardNumber3" required maxlength="4" minlength="4">
+                            </div>
+                            <!-- <h3 >-</h3> -->
+                            
+                            <div class="col-sm-3" style="padding-left: 0px; padding-right: 13px;" >
+                                <input type="num" class="form-control" id="cardNumber4" ngModel
+                                name="cardNumber4" required maxlength="4" minlength="4">
+                            </div>
                         </div>
-                        <p style="font-size:23px">/</p>
-                        <div class="col-sm-5" style="padding-right:0px">
-                            <select id="card-expiration-year"  name="expiration-year"  class="form-control" required ngModel>
-                                <option value="" disabled selected>YYYY</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                        </div>                                          
                     </div>
             </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">CCV</label>
+                    <!-- <div class="row"> -->
+                            <input type="num" class="form-control" id="ccv" ngModel
+                            name="ccv" required maxlength="3" minlength="3">
+                    <!-- </div> -->
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <div class="form-group ">
-                <label for="exampleInputEmail1">Card Type</label>
-                <input 
-                type="text" 
-                class="form-control" 
-                id="cardType" 
-                ngModel
-                name="cardType" 
-                value={{cardType}}
-                readonly="true">
-            </div>      
-        </div>
-    </div>
-
-        
-
-
-
-
-
-   
-
     
+        <div class="form-row justify-content-center">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label><span>Expiration</span></label>
+                        <div class="input-group justify-content-start">
+                            <div class="col-sm-5" style="padding-left:0px">
+                                <select id="card-expiration-month" name="exoiration-month" class="form-control" required ngModel>
+                                    <option value="" disabled selected>MM</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <p style="font-size:23px">/</p>
+                            <div class="col-sm-5" style="padding-right:0px">
+                                <select id="card-expiration-year"  name="expiration-year"  class="form-control" required ngModel>
+                                    <option value="" disabled selected>YYYY</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </div>                                          
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group ">
+                    <label for="exampleInputEmail1">Card Type</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="cardType" 
+                    ngModel
+                    name="cardType" 
+                    value={{cardType}}
+                    readonly="true">
+                </div>      
+            </div>
+        </div>
+        
+        <div class="text-center">
 
-   
-        
-        
-        
-        
-        
-        
-        
-        
-        <button type="submit" [disabled]="!creditCardForm.valid" class="btn btn-primary">Rewiew</button>
+            <button type="submit" [disabled]="!creditCardForm.valid" class="btn btn-primary">Review Order</button>
+        </div>
     </form>
-    <!-- <button (click)="test(creditCardForm)">TTT</button> -->
-
 </div>

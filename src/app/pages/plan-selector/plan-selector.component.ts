@@ -17,7 +17,7 @@ export class PlanSelectorComponent implements OnInit {
   ngOnInit(): void {
     this.allTabs = this.tabDataService.getAllTabs();
     this.allTabs.forEach((value) => {
-      if (value.heading.substr(0, 8) === 'PERSONAL') {
+      if (value.heading.substr(0, 8) === 'Personal') {
         this.personalTabs.push(value);
       } else {
         this.enterpriseTabs.push(value);

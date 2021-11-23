@@ -10,23 +10,22 @@ export class TabDataService {
 
   constructor() {
     let tabP1 = new Tab(
-      'PERSONAL1',
+      'Personal-1',
       ['Reason to choose1', 'Reason to choose2', 'Reason to choose3'],
       100
     );
     let tabP2 = new Tab(
-      'PERSONAL2',
+      'Personal-2',
       [
         'Reason to choose1',
         'Reason to choose2',
-        ,
         'Reason to choose3',
         'Reason to choose4',
       ],
       200
     );
     let tabP3 = new Tab(
-      'PERSONAL3',
+      'Personal-3',
       [
         'Reason to choose1',
         'Reason to choose2',
@@ -37,17 +36,22 @@ export class TabDataService {
       300
     );
     let tabE1 = new Tab(
-      'ENTERPRISE1',
+      'Enterprise-1',
       ['Reason to choose1', 'Reason to choose2', 'Reason to choose3'],
       1000
     );
     let tabE2 = new Tab(
-      'ENTERPRISE2',
-      ['Reason to choose1', 'Reason to choose2', , 'Reason to choose4'],
+      'Enterprise-2',
+      [
+        'Reason to choose1',
+        'Reason to choose2',
+        'Reason to choose3',
+        'Reason to choose4',
+      ],
       2000
     );
     let tabE3 = new Tab(
-      'ENTERPRISE3',
+      'Enterprise-3',
       [
         'Reason to choose1',
         'Reason to choose2',

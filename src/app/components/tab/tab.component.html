@@ -1,12 +1,42 @@
 <div class="col-md-4">
-    <div class="card" style="width: 18rem; ">
-        <div class="card-body">
-            <h5 class="card-title">{{this.tab.heading}}</h5>
-            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-            <p class="card-text" *ngFor="let point of tab.points">{{point}}</p>
+  <div class="card card-custom" style="width: 18rem">
+    <div
+      class="card-body card-custom"
+      [ngClass]="'card-background-' + this.tab.heading"
+    >
+      <h5 class="card-title">
+        <i class="fas fa-angle-double-right"></i> {{ this.tab.heading }}
+      </h5>
+      <hr />
+      <div
+        class="most-popular-logo"
+        style="top: -35px; right: -50px"
+        *ngIf="
+          this.tab.heading === 'Personal-2' ||
+          this.tab.heading === 'Enterprise-2'
+        "
+      >
+        <img src="assets/img/1.png" alt="most popular icon" />
+      </div>
+      <div class="card-body">
+        <p class="card-text" *ngFor="let point of tab.points">
+          <i class="far fa-check-circle"></i> {{ point }}
+        </p>
+      </div>
+      <p class="card-text price-text text-center">
+        €{{ this.tab.price }} <small>/year</small>
+      </p>
 
-            <p class="card-text">PRICE:{{this.tab.price}}</p>
-            <a href="#" class="card-link" (click)="onClick()" [routerLink]="'/form'">SELECT</a>
-        </div>
+      <button
+        class="btn btn-primary btn-select"
+        [ngClass]="{
+          'btn-select-enterprise': this.tab.heading.substring(0, 5) === 'Enter'
+        }"
+        (click)="onClick()"
+        [routerLink]="'/form'"
+      >
+        Choose Plan
+      </button>
     </div>
+  </div>
 </div>

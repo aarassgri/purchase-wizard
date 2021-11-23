@@ -1,7 +1,12 @@
 <div class="container">
-  <div class="text-center"><h2>Preview</h2></div>
+  <div class="text-center"><h4>Preview</h4></div>
   <div class="row justify-content-center">
     <div class="col-sm-6">
+      <hr />
+      <div *ngIf="isLoading">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+
       <table class="table table-striped">
         <thead>
           <tr></tr>

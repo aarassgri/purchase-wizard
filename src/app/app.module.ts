@@ -8,6 +8,8 @@ import { TabComponent } from './components/tab/tab.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { FormsModule } from '@angular/forms';
 import { OrderPreviewComponent } from './pages/order-preview/order-preview.component';
+import { OrderCompletedComponent } from './pages/order-completed/order-completed.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { OrderPreviewComponent } from './pages/order-preview/order-preview.compo
     TabComponent,
     FormPageComponent,
     OrderPreviewComponent,
+    OrderCompletedComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

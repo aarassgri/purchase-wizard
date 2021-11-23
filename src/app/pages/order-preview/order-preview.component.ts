@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormDataService } from 'src/app/service/form-data.service';
 import { TabDataService } from 'src/app/service/tab-data.service';
 
@@ -14,10 +15,12 @@ export class OrderPreviewComponent implements OnInit {
   cardType: string;
   subscription: string;
   price: number;
+  isLoading: boolean = false;
 
   constructor(
     private formDataService: FormDataService,
-    private tabDataService: TabDataService
+    private tabDataService: TabDataService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -35,5 +38,13 @@ export class OrderPreviewComponent implements OnInit {
     );
   }
 
-  onClick() {}
+  stopSpinnerAndNavigate() {}
+
+  onClick() {
+    this.isLoading = !this.isLoading;
+    setTimeout(() => {
+      this.isLoading = !this.isLoading;
+      this.router.navigate(['/order-completed']);
+    }, 10000);
+  }
 }

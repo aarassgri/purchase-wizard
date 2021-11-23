@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CountriesService } from 'src/app/service/countries/countries.service';
+import { FormDataService } from 'src/app/service/form-data.service';
 
 @Component({
   selector: 'app-form-page',
@@ -12,14 +14,14 @@ export class FormPageComponent implements OnInit {
   countryList: string[] = [];
   listOfCountires: string[] = [];
 
-  constructor(private countriesService: CountriesService) {}
+  constructor(
+    private countriesService: CountriesService,
+    private formDataService: FormDataService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.listOfCountires = this.countriesService.getAllCountires();
-  }
-
-  onSubmit(form: NgForm) {
-    console.log(form);
   }
 
   detectCardType(number: number) {
@@ -52,7 +54,23 @@ export class FormPageComponent implements OnInit {
     }
   }
 
-  // test(form) {
-  //   console.log(form.value.country);
+  onSubmit(form: NgForm) {
+    let fullCardNumber = form.value.cardNumber1
+      .toString()
+      .concat(
+        ' ',
+        form.value.cardNumber2.toString(),
+        ' ',
+        form.value.cardNumber3.toString(),
+        ' ',
+        form.value.cardNumber4.toString()
+      );
+    this.formDataService.setCardNumber(fullCardNumber);
+    this.formDataService.setCardType(this.cardType);
+    this.router.navigate(['/order-preview']);
+  }
+
+  // test(form: NgForm) {
+  //   console.log(form);
   // }
 }

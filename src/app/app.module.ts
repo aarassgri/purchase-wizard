@@ -7,6 +7,7 @@ import { PlanSelectorComponent } from './pages/plan-selector/plan-selector.compo
 import { TabComponent } from './components/tab/tab.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { FormsModule } from '@angular/forms';
+import { OrderPreviewComponent } from './pages/order-preview/order-preview.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     PlanSelectorComponent,
     TabComponent,
     FormPageComponent,
+    OrderPreviewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
